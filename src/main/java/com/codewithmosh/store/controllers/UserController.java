@@ -22,7 +22,7 @@ public class UserController {
 
     @GetMapping
     public Iterable<UserDto> getAllUsers(
-        @RequestParam(required = false, defaultValue = "", name = "sort") String sort
+            @RequestParam(required = false, defaultValue = "", name = "sort") String sort
     ) {
          if (!Set.of("name", "email").contains(sort)) {
              sort = "name";
@@ -40,5 +40,10 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(userMapper.toDto(user));
+    }
+
+    @PostMapping
+    public UserDto createUser(@RequestBody UserDto data) {
+        return data;
     }
 }
