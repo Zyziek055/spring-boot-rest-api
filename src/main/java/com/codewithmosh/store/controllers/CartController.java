@@ -128,7 +128,10 @@ public class CartController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
 
-        ca
+        cart.clear();
+        cartRepository.save(cart);
+
+        return ResponseEntity.noContent().build();
     }
 
 }
