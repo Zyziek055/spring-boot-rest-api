@@ -1,25 +1,19 @@
 package com.codewithmosh.store.services;
-
 import com.codewithmosh.store.dtos.CartDto;
 import com.codewithmosh.store.dtos.CartItemDto;
 import com.codewithmosh.store.entities.Cart;
-import com.codewithmosh.store.entities.CartItem;
-import com.codewithmosh.store.entities.Product;
 import com.codewithmosh.store.exceptions.CartNotFoundException;
 import com.codewithmosh.store.exceptions.ProductNotFoundException;
 import com.codewithmosh.store.mappers.CartMapper;
 import com.codewithmosh.store.repositories.CartRepository;
 import com.codewithmosh.store.repositories.ProductRepository;
-import org.antlr.v4.runtime.misc.LogManager;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import lombok.AllArgsConstructor;
+import org.hibernate.annotations.AnyKeyJavaClass;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 import java.util.UUID;
 
 @Service
+@AllArgsConstructor
 public class CartService {
     private CartRepository cartRepository;
     private CartMapper cartMapper;
