@@ -64,6 +64,21 @@
             <groupId>org.springframework.boot</groupId>
         </dependency>
         <dependency>
+            <artifactId>jjwt-impl</artifactId>
+            <groupId>io.jsonwebtoken</groupId>
+            <version>0.12.6</version>
+        </dependency>
+        <dependency>
+            <artifactId>jjwt-jackson</artifactId>
+            <groupId>io.jsonwebtoken</groupId>
+            <version>0.12.5</version>
+        </dependency>
+        <dependency>
+            <artifactId>jjwt-api</artifactId>
+            <groupId>io.jsonwebtoken</groupId>
+            <version>0.12.5</version>
+        </dependency>
+        <dependency>
             <artifactId>mysql-connector-j</artifactId>
             <groupId>com.mysql</groupId>
             <scope>runtime</scope>
